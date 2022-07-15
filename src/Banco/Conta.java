@@ -7,6 +7,12 @@ public abstract class Conta {
 	
 	abstract boolean Deposita(Double Valor);
 	
+	public Conta(Long agencia, Long numeroConta) {
+		this.Agencia = agencia;
+		this.NumeroConta = numeroConta;
+		this.Saldo = 0;
+	}
+	
 	public boolean Saca(Double Valor) {
 		if(this.Saldo >= Valor) {
 			this.Saldo -= Valor;

@@ -11,8 +11,11 @@ public class ContaCorrente extends Conta {
 		}
 		return false;
 	}
-
+	@Override
 	public boolean Saca(Double Valor) {
 			return super.Saca(Valor + TAXA_SAQUE);			
+	}
+	public ContaCorrente(Long agencia, Long numeroConta) {
+		super(agencia, numeroConta);
 	}
 }
