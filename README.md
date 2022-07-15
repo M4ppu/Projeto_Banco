@@ -6,6 +6,7 @@
 - 🌼Ellen Ferreira
 - 🌼Larissa Arcoverde
 - 🌼Gio Morais
+- 🌼Nataly Carvalho
 
 ### O projeto consta em um banco digital utilizando 
 - Classes, Atributos e Objetos,
