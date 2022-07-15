@@ -16,7 +16,7 @@ public class ContaPoupanca extends Conta{
 		int tempoAno = read.nextInt();
 		double taxaValorFinal = 0;
 		for(int i=0; i<tempoAno; i++) {
-			taxaValorFinal = Valor * taxaRendimento;
+			taxaValorFinal += (Valor + taxaValorFinal) * taxaRendimento;
 		}
 		if (Valor > 0) {
 			this.Saldo += Valor + taxaValorFinal;
