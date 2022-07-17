@@ -34,4 +34,8 @@ public abstract class Pessoa {
 	public void setIdade(int idade) {
 		Idade = idade;
 	}
+	@Override
+	public String toString() {
+		return "Nome: " +  nome + "\nCPF: " + CPF + "\nIdade: " + Idade;
+	}
 }

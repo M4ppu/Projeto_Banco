@@ -1,7 +1,7 @@
 package Banco;
 
 public abstract class Funcionario extends Pessoa {
-	public Funcionario(String nome, String CPF, String Cargo, int Idade) {
+	public Funcionario(String nome, String CPF, int Idade) {
 		super(nome, CPF, Idade);
 	}
 

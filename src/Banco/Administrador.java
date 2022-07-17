@@ -1,9 +1,11 @@
 package Banco;
 
 public class Administrador extends Funcionario implements Autenticavel {
+	private String cargo;
 
 	public Administrador(String nome, String CPF, int Idade, String Cargo) {
-		super(nome, CPF, Cargo, Idade);
+		super(nome, CPF, Idade);
+		this.cargo = Cargo;
 	}
 
 	private String senha;

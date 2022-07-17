@@ -1,15 +1,16 @@
 package Banco;
 
 public class Cliente extends Pessoa {
-
-	public Cliente(String nome, String CPF, int Idade) {
-		super(nome, CPF, Idade);
-	}
-
 	private String profissao;
 	private int senha;
+	Conta conta;
+	
+	public Cliente(String nome, String CPF, int Idade, Conta conta) {
+		super(nome, CPF, Idade);
+		this.conta = conta;
+	}
 
-	public String getProfissao() {
+		public String getProfissao() {
 		return profissao;
 	}
 
@@ -24,4 +25,9 @@ public class Cliente extends Pessoa {
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + "\nConta: " + conta.getNumeroConta() + "\nAgência: " + conta.getAgencia();
+	}	
 }
