@@ -5,15 +5,15 @@
 - 🌼Luiza Lima
 - 🌼Ellen Ferreira
 - 🌼Larissa Arcoverde
-- 🌼Gio Morais
+- 🌼Giovana Morais
 - 🌼Nataly Carvalho
 
-### O projeto consta em um banco digital utilizando 
-- Classes, Atributos e Objetos,
+### O Projeto é um banco digital, no qual contém:
+- Classes, Atributos e Objetos
 - Herança 
 - Encapsulamento
 - Polimorfismo
 - Sobrecarga 
 - Sobreescrita
 - Collections
-- Eceptions.
+- Exceptions
