@@ -2,8 +2,8 @@ package Banco;
 
 public abstract class Funcionario extends Pessoa  {
 	
-	public Funcionario() {
-		super("maria", "09878356478", 23);
+	public Funcionario(String nome, String CPF, int Idade) {
+		super(nome, CPF, Idade);
 	}
 	
 	
@@ -24,4 +24,4 @@ public abstract class Funcionario extends Pessoa  {
 	{
 		System.out.println("O salario é: "+Salario);
 	}	
-}
+}	
