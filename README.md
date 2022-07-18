@@ -1,4 +1,4 @@
-# Projeto de finalização do Modulo I
+# Projeto de finalização do Bloco I
 - Turma 55
 - Integrantes:
 - 🌼Luana Nascimento

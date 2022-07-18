@@ -37,4 +37,13 @@ public abstract class Conta {
 	public double getSaldo() {
 		return Saldo;
 	}
+
+	public Long getAgencia() {
+		return Agencia;
+	}
+
+	public Long getNumeroConta() {
+		return NumeroConta;
+	}
+	
 }
