@@ -78,7 +78,7 @@ public class testeGeral {
 			Cliente novaConta = gerente.associaConta(nome,CPF,idade,continhaCriada);
 			listaCadastro.add(novaConta);
 			System.out.println("Dados da sua nova conta: ");
-			System.out.println(novaConta);
+			System.out.println(novaConta);break;
 		case 2:
 			System.out.println("Você escolheu acessar a conta corrente!!");
 			

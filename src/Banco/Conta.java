@@ -16,10 +16,11 @@ public abstract class Conta {
 	public boolean Saca(Double Valor) {
 		if(this.Saldo >= Valor) {
 			this.Saldo -= Valor;
+			System.out.println("--> Saque realizado com sucesso!");
 			return true;
 		}
 		else {
-			System.out.println("Valor inserido maior que o da conta!");
+			System.out.println("--> Valor inserido maior que o da conta!");
 			return false;
 		}
 	}
@@ -27,10 +28,11 @@ public abstract class Conta {
 		if(this.Saldo >= Valor) {
 			this.Saldo -= Valor;
 			Destino.Deposita(Valor);
+			System.out.println("\n--> Transferência feita com sucesso");
 			return true;
 		}
 		else {
-			System.out.println("Valor inserido maior que o da conta!");
+			System.out.println("\n--> Transferência falhou!");
 			return false;
 		}
 	}
