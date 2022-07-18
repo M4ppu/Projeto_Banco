@@ -6,12 +6,11 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.regex.Pattern;
 
-public class testeGeral2 {
+public class BancoMu {
 	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		Random gerador = new Random();
 
-		CheckNome checkname = new CheckNome();
 		ContaCorrente contaCorrenteV = new ContaCorrente(1234, 12345);
 		ContaCorrente contaCorrenteE = new ContaCorrente(2345, 23456);
 		ContaPoupanca contaPoupancaL = new ContaPoupanca(3456, 34567);
@@ -62,7 +61,7 @@ public class testeGeral2 {
 					continha = scan.nextInt();
 				}
 				Conta continhaCriada = gerente.criarConta(agencia, numero, continha);
-				System.out.print("\nDigite seu nome:");
+				System.out.print("\nDigite seu nome: ");
 				String nome = scan.next();
 
 				do {
@@ -76,22 +75,20 @@ public class testeGeral2 {
 					} 
 					catch (Exception e) {
 						System.err.printf("Exceção: %s\n", e);
-						System.out.print("Digite novamente");
 						nome = scan.next();
 					}
 				}
 
 				while (continueLoop);
 
-				System.out.print("Digite seu CPF:");
+				System.out.print("Digite seu CPF: ");
 				String CPF = scan.next();
 
-				System.out.print("Digite sua idade:");
+				System.out.print("Digite sua idade: ");
 				int idade = scan.nextInt();
-				while (idade < 18) {
-					System.out.println("Idade menor que 18 anos");
-					System.out.print("Digite sua idade:");
-					idade = scan.nextInt();
+				if (idade < 18) {
+					System.err.println("\n--> Idade menor que 18 anos, criação de conta interrompida!");
+					break;
 				}
 
 				Cliente novaConta = gerente.associaConta(nome, CPF, idade, continhaCriada);
