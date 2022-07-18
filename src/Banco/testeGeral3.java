@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.regex.Pattern;
 
-public class testeGeral2 {
+public class testeGeral3 {
 	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		Random gerador = new Random();
@@ -70,11 +70,9 @@ public class testeGeral2 {
 					try {
 						if (Pattern.matches("[a-zA-Z]+", nome) == false || nome.length() < 3) {
 							throw new Exception("\nNome inválido");
-						} 
-						else
+						} else
 							continueLoop = false;
-					} 
-					catch (Exception e) {
+					} catch (Exception e) {
 						System.err.printf("Exceção: %s\n", e);
 						System.out.print("Digite novamente");
 						nome = scan.next();
@@ -149,8 +147,7 @@ public class testeGeral2 {
 						if (j == 1) {
 							System.out.println("\nVocê escolheu ver seu saldo");
 							System.out.printf("\nSeu saldo é de R$%.2f\n", cliente1.conta.getSaldo());
-						}
-						else if (j == 2) {
+						} else if (j == 2) {
 							System.out.println("\n Você escolheu fazer uma tranferência!");
 							System.out.print("Valor que deseja transferir para Enzo: R$");
 							transf1 = scan.nextDouble();
@@ -161,21 +158,18 @@ public class testeGeral2 {
 							}
 							System.out.printf("\nTransferir R$%.2f para Enzo", transf1);
 							cliente1.conta.Tranferir(transf1, cliente2.conta);
-						} 
-						else if (j == 3) {
+						} else if (j == 3) {
 							System.out.println("\nVocê escolheu fazer um depósito!");
 							System.out.print("Valor do depósito: R$");
 							deposito1 = scan.nextDouble();
 							contaCorrenteV.Deposita(deposito1);
-						} 
-						else if (j == 4) {
+						} else if (j == 4) {
 							System.out.println("\nVocê escolheu sacar o dinheiro");
 							System.out.printf("\nValor em conta R$%.2f\n", contaCorrenteV.getSaldo());
 							System.out.print("Valor do saque R$");
 							saca1 = scan.nextDouble();
 							contaCorrenteV.Saca(saca1);
-						} 
-						else if (j == 0)
+						} else if (j == 0)
 							break;
 					} else if (i == 2) {
 						System.out.println("\n-_-_-_-_-_--_-_--_-_--_-_-_-_-_-_-_-_-_-_\n");
@@ -204,7 +198,7 @@ public class testeGeral2 {
 							System.out.println("\nVocê escolheu ver seu saldo");
 							System.out.printf("\nSeu saldo é de R$%.2f\n", cliente2.conta.getSaldo());
 						}
-						else if (j == 2) {
+						if (j == 2) {
 							System.out.println("\n Você escolheu fazer uma tranferência!");
 							System.out.print("Valor que deseja transferir para Valentina: R$");
 							transf2 = scan.nextDouble();
@@ -215,20 +209,20 @@ public class testeGeral2 {
 							System.out.printf("\nTransferir R$%.2f para Valentina", transf2);
 							cliente2.conta.Tranferir(transf2, cliente1.conta);
 						}
-						else if (j == 3) {
+						if (j == 3) {
 							System.out.println("\nVocê escolheu fazer um depósito!");
 							System.out.print("Valor do depósito: R$");
 							deposito2 = scan.nextDouble();
 							contaCorrenteE.Deposita(deposito2);
 						}
-						else if (j == 4) {
+						if (j == 4) {
 							System.out.println("\nVocê escolheu sacar o dinheiro");
 							System.out.printf("\nValor em conta R$%.2f\n", contaCorrenteE.getSaldo());
 							System.out.print("Valor do saque R$");
 							saca2 = scan.nextDouble();
 							contaCorrenteE.Saca(saca2);
 						}
-						else if (j == 0)
+						if (j == 0)
 							break;
 					} else
 						break;
@@ -279,42 +273,26 @@ public class testeGeral2 {
 							System.out.print("Valor a ser depositado R$");
 							depositoPoup = scan.nextDouble();
 							contaPoupancaL.Deposita(depositoPoup);
-						} 
-						else if (l == 2) {
+						} else if (l == 2) {
 							System.out.println("Você escolheu sacar da poupança!");
 							System.out.print("Valor a ser sacado R$");
 							sacaPoupanca = scan.nextDouble();
 							contaPoupancaL.Saca(sacaPoupanca);
 
-						} 
-						else if (l == 3) {
+						} else if (l == 3) {
 							System.out.println("\nVocê escolheu ver seu saldo");
 							System.out.printf("\nSeu saldo é de R$%.2f\n", cliente3.conta.getSaldo());
-						} 
-						else
+						} else
 							break;
 					}
 				}
 				break;
-
+				
 			case 4:
 				int m = 1;
-				if (listaCadastro.isEmpty()) {
-					System.out.println("\nSem novos cadastros\n");
-				} 
-				else {
-					for (Cliente clientesCadratro : listaCadastro) {
-						System.out.println("\tPessoa " + m + "\n" + clientesCadratro.toString() + "\n");
-						m++;
-					}
-				}
-
-				System.out.println("Coloque 0 para retornar ao menu!");
-				int n = scan.nextInt();
-				while (n != 0) {
-					System.out.println("Opção inválida!");
-					System.out.println("Coloque 0 para retornar ao menu!");
-					n = scan.nextInt();
+				for(Cliente clientesCadratro : listaCadastro)	{
+				     System.out.println("\tPessoa "+ m + "\n" + clientesCadratro.toString() + "\n"); 
+				     m++;
 				}
 
 			case 0:
