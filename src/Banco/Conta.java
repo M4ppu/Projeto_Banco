@@ -2,12 +2,12 @@ package Banco;
 
 public abstract class Conta {
 	protected double Saldo;
-	protected Long Agencia;
-	protected Long NumeroConta;
+	protected int Agencia;
+	protected int NumeroConta;
 	
 	abstract boolean Deposita(Double Valor);
 	
-	public Conta(Long agencia, Long numeroConta) {
+	public Conta(int agencia, int numeroConta) {
 		this.Agencia = agencia;
 		this.NumeroConta = numeroConta;
 		this.Saldo = 0;
@@ -38,11 +38,11 @@ public abstract class Conta {
 		return Saldo;
 	}
 
-	public Long getAgencia() {
+	public int getAgencia() {
 		return Agencia;
 	}
 
-	public Long getNumeroConta() {
+	public int getNumeroConta() {
 		return NumeroConta;
 	}
 	

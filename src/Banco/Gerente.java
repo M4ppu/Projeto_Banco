@@ -14,7 +14,7 @@ public class Gerente extends Funcionario {
 		return cliente;
 	}
 	
-	public Conta criarConta(Long agencia, Long numeroConta, int tipoConta){
+	public Conta criarConta(int agencia, int numeroConta, int tipoConta){
 		if(tipoConta == 1) {
 			ContaCorrente conta = new ContaCorrente(agencia, numeroConta);
 			return conta;

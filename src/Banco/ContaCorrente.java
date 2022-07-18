@@ -3,7 +3,7 @@ package Banco;
 public class ContaCorrente extends Conta {
 	private final double TAXA_SAQUE = 2.5;
 
-	public ContaCorrente(Long agencia, Long numeroConta) {
+	public ContaCorrente(int agencia, int numeroConta) {
 		super(agencia, numeroConta);
 	}
 	@Override

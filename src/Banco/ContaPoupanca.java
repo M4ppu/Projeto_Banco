@@ -6,7 +6,7 @@ public class ContaPoupanca extends Conta{
 
 	private double taxaRendimento = 0.1;
 	
-	public ContaPoupanca(Long agencia, Long numeroConta) {
+	public ContaPoupanca(int agencia, int numeroConta) {
 		super(agencia, numeroConta);
 	}
 	@Override
